@@ -1,0 +1,509 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sorriso - Clínica Odontológica | Tailwind</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+    <header class="bg-white shadow-md">
+        <nav class="max-w-7xl mx-auto px-4 py-4">
+
+            <div class="flex justify-between items-center">
+
+                <a href="#inicio" class="text-2xl font-bold text-blue-700">
+                    Sorriso Clínica
+                </a>
+
+                <button
+                    id="botaoMenu"
+                    class="md:hidden text-3xl text-blue-700"
+                    aria-label="Abrir menu"
+                    aria-expanded="false">
+                    ☰
+                </button>
+
+                <div id="menuPrincipal"
+                     class="hidden md:flex flex-col md:flex-row gap-4 md:items-center
+                            absolute md:static top-16 left-0 w-full md:w-auto
+                            bg-white md:bg-transparent p-4 md:p-0 shadow-md
+                            md:shadow-none z-40">
+
+                    <a href="#inicio" class="hover:text-blue-600">Início</a>
+                    <a href="#equipe" class="hover:text-blue-600">Nossa equipe</a>
+                    <a href="#procedimentos" class="hover:text-blue-600">Procedimentos</a>
+                    <a href="#agendamento" class="hover:text-blue-600">Agendamento</a>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+        
+        <section id="inicio" class="max-w-7xl mx-auto px-4 py-8">
+
+            <!-- CARROSSEL -->
+            <div id="carouselClinica"
+                class="relative isolate w-full h-[300px] md:h-[450px] overflow-hidden rounded-2xl shadow-lg">
+
+                <div id="slides" class="relative w-full h-full">
+
+                    <div class="slide absolute inset-0 w-full h-full opacity-100 z-10 transition-opacity duration-700">
+                        <img
+                            src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1600"
+                            alt="Consultório odontológico"
+                            class="absolute inset-0 w-full h-full object-cover"
+                        >
+
+                        <div class="absolute z-20 bottom-5 left-1/2 -translate-x-1/2
+                                    w-[90%] max-w-2xl bg-black/75 text-white
+                                    text-center p-4 md:p-6 rounded-xl">
+
+                            <h2 class="text-xl md:text-3xl font-bold mb-2">
+                                Cuidando do seu sorriso
+                            </h2>
+
+                            <p class="text-sm md:text-lg">
+                                Atendimento odontológico de qualidade para você.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-700">
+                        <img
+                            src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=1600"
+                            alt="Atendimento odontológico"
+                            class="absolute inset-0 w-full h-full object-cover"
+                        >
+
+                        <div class="absolute z-20 bottom-5 left-1/2 -translate-x-1/2
+                                    w-[90%] max-w-2xl bg-black/75 text-white
+                                    text-center p-4 md:p-6 rounded-xl">
+
+                            <h2 class="text-xl md:text-3xl font-bold mb-2">
+                                Tecnologia e cuidado
+                            </h2>
+
+                            <p class="text-sm md:text-lg">
+                                Utilizamos tecnologia para oferecer o melhor tratamento.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="slide absolute inset-0 w-full h-full opacity-0 transition-opacity duration-700">
+                        <img
+                            src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=1600"
+                            alt="Profissional realizando procedimento odontológico"
+                            class="absolute inset-0 w-full h-full object-cover"
+                        >
+
+                        <div class="absolute z-20 bottom-5 left-1/2 -translate-x-1/2
+                                    w-[90%] max-w-2xl bg-black/75 text-white
+                                    text-center p-4 md:p-6 rounded-xl">
+
+                            <h2 class="text-xl md:text-3xl font-bold mb-2">
+                                Seu sorriso merece atenção
+                            </h2>
+
+                            <p class="text-sm md:text-lg">
+                                Agende sua consulta e conheça nossa equipe.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button id="anterior"
+                        class="absolute z-30 left-4 top-1/2 -translate-y-1/2
+                            bg-black/60 text-white w-11 h-11 rounded-full
+                            hover:bg-black/80">
+                    &#10094;
+                </button>
+
+                <button id="proximo"
+                        class="absolute z-30 right-4 top-1/2 -translate-y-1/2
+                            bg-black/60 text-white w-11 h-11 rounded-full
+                            hover:bg-black/80">
+                    &#10095;
+                </button>
+
+                <div class="absolute z-30 bottom-4 left-1/2 -translate-x-1/2
+                            flex gap-3 bg-white/90 px-4 py-2 rounded-full shadow-lg">
+
+                    <button class="indicador w-3 h-3 rounded-full bg-blue-700"
+                            aria-label="Ir para slide 1"></button>
+
+                    <button class="indicador w-3 h-3 rounded-full bg-gray-400"
+                            aria-label="Ir para slide 2"></button>
+
+                    <button class="indicador w-3 h-3 rounded-full bg-gray-400"
+                            aria-label="Ir para slide 3"></button>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <section id="equipe" class="max-w-7xl mx-auto px-4 py-16">
+
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold text-blue-800 mb-3">
+                    Nossa equipe
+                </h2>
+
+                <p class="text-gray-600">
+                    Conheça os profissionais responsáveis pelo seu sorriso.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <article class="bg-white rounded-xl shadow-md overflow-hidden
+                                hover:shadow-xl transition">
+                    <img
+                        src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600"
+                        alt="Dra. Maria Fernanda"
+                        class="w-full h-64 object-cover">
+
+                    <div class="p-5 text-center">
+                        <h3 class="text-xl font-bold mb-2">Dra. Maria Fernanda</h3>
+                        <p class="text-blue-700 font-semibold mb-3">Odontopediatria</p>
+                        <p class="text-gray-600 mb-4">
+                            Atendimento odontológico especializado para crianças.
+                        </p>
+                        <a href="#agendamento"
+                           class="inline-block bg-blue-700 text-white px-5 py-2
+                                  rounded-lg hover:bg-blue-800">
+                            Agendar consulta
+                        </a>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition">
+                    <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=600"
+                         alt="Dr. João Pedro" class="w-full h-64 object-cover">
+                    <div class="p-5 text-center">
+                        <h3 class="text-xl font-bold mb-2">Dr. João Pedro</h3>
+                        <p class="text-blue-700 font-semibold mb-3">Ortodontia</p>
+                        <p class="text-gray-600 mb-4">Cuidados com o alinhamento dos dentes e da mordida.</p>
+                        <a href="#agendamento" class="inline-block bg-blue-700 text-white px-5 py-2 rounded-lg hover:bg-blue-800">Agendar consulta</a>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition">
+                    <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=600"
+                         alt="Dra. Ana Clara" class="w-full h-64 object-cover">
+                    <div class="p-5 text-center">
+                        <h3 class="text-xl font-bold mb-2">Dra. Ana Clara</h3>
+                        <p class="text-blue-700 font-semibold mb-3">Endodontia</p>
+                        <p class="text-gray-600 mb-4">Tratamentos voltados à saúde da parte interna dos dentes.</p>
+                        <a href="#agendamento" class="inline-block bg-blue-700 text-white px-5 py-2 rounded-lg hover:bg-blue-800">Agendar consulta</a>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition">
+                    <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=600"
+                         alt="Dr. Rafael Costa" class="w-full h-64 object-cover">
+                    <div class="p-5 text-center">
+                        <h3 class="text-xl font-bold mb-2">Dr. Rafael Costa</h3>
+                        <p class="text-blue-700 font-semibold mb-3">Implantodontia</p>
+                        <p class="text-gray-600 mb-4">Reabilitação do sorriso por meio de implantes dentários.</p>
+                        <a href="#agendamento" class="inline-block bg-blue-700 text-white px-5 py-2 rounded-lg hover:bg-blue-800">Agendar consulta</a>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition">
+                    <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=600"
+                         alt="Dra. Juliana Alves" class="w-full h-64 object-cover">
+                    <div class="p-5 text-center">
+                        <h3 class="text-xl font-bold mb-2">Dra. Juliana Alves</h3>
+                        <p class="text-blue-700 font-semibold mb-3">Periodontia</p>
+                        <p class="text-gray-600 mb-4">Prevenção e tratamento de problemas na gengiva.</p>
+                        <a href="#agendamento" class="inline-block bg-blue-700 text-white px-5 py-2 rounded-lg hover:bg-blue-800">Agendar consulta</a>
+                    </div>
+                </article>
+
+                <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition">
+                    <img src="https://images.unsplash.com/photo-1622902046580-2b47f47f5471?w=600"
+                         alt="Dr. Lucas Martins" class="w-full h-64 object-cover">
+                    <div class="p-5 text-center">
+                        <h3 class="text-xl font-bold mb-2">Dr. Lucas Martins</h3>
+                        <p class="text-blue-700 font-semibold mb-3">Clínica Geral</p>
+                        <p class="text-gray-600 mb-4">Cuidados gerais e acompanhamento da saúde bucal.</p>
+                        <a href="#agendamento" class="inline-block bg-blue-700 text-white px-5 py-2 rounded-lg hover:bg-blue-800">Agendar consulta</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="procedimentos" class="bg-blue-50 py-16">
+
+            <div class="max-w-5xl mx-auto px-4">
+
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold text-blue-800 mb-3">
+                        Procedimentos e valores
+                    </h2>
+
+                    <p class="text-gray-600">
+                        Confira alguns dos nossos serviços.
+                    </p>
+                </div>
+
+                <div class="overflow-x-auto bg-white rounded-xl shadow-md">
+
+                    <table class="w-full text-left border-collapse">
+
+                        <thead class="bg-blue-700 text-white">
+                            <tr>
+                                <th class="p-4">Procedimento</th>
+                                <th class="p-4">Valor com plano</th>
+                                <th class="p-4">Valor particular</th>
+                            </tr>
+                        </thead>
+
+                        <tbody class="divide-y divide-gray-200">
+
+                            <tr class="even:bg-gray-50">
+                                <td class="p-4">Consulta de avaliação</td>
+                                <td class="p-4">R$ 0,00</td>
+                                <td class="p-4">R$ 120,00</td>
+                            </tr>
+
+                            <tr class="even:bg-gray-50">
+                                <td class="p-4">Limpeza dentária</td>
+                                <td class="p-4">R$ 0,00</td>
+                                <td class="p-4">R$ 180,00</td>
+                            </tr>
+
+                            <tr class="even:bg-gray-50">
+                                <td class="p-4">Clareamento</td>
+                                <td class="p-4">R$ 250,00</td>
+                                <td class="p-4">R$ 600,00</td>
+                            </tr>
+
+                            <tr class="even:bg-gray-50">
+                                <td class="p-4">Restauração</td>
+                                <td class="p-4">R$ 0,00</td>
+                                <td class="p-4">R$ 200,00</td>
+                            </tr>
+
+                            <tr class="even:bg-gray-50">
+                                <td class="p-4">Tratamento de canal</td>
+                                <td class="p-4">R$ 150,00</td>
+                                <td class="p-4">R$ 750,00</td>
+                            </tr>
+
+                            <tr class="even:bg-gray-50">
+                                <td class="p-4">Extração dentária</td>
+                                <td class="p-4">R$ 80,00</td>
+                                <td class="p-4">R$ 300,00</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <p class="text-sm text-gray-500 mt-4">
+                    Valores fictícios para demonstração. A cobertura depende das condições de cada plano.
+                </p>
+
+            </div>
+        </section>
+
+        <section id="agendamento" class="max-w-4xl mx-auto px-4 py-16">
+
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-blue-800 mb-3">
+                    Agende sua consulta
+                </h2>
+
+                <p class="text-gray-600">
+                    Preencha os dados abaixo para solicitar seu atendimento.
+                </p>
+            </div>
+
+            <form id="formAgendamento"
+                  class="bg-white p-6 md:p-10 rounded-xl shadow-md">
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+                    <div>
+                        <label for="nome" class="block font-semibold mb-2">
+                            Nome completo
+                        </label>
+                        <input type="text" id="nome" name="nome" required
+                               class="w-full border border-gray-300 rounded-lg p-3
+                                      focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+
+                    <div>
+                        <label for="email" class="block font-semibold mb-2">
+                            E-mail
+                        </label>
+                        <input type="email" id="email" name="email" required
+                               class="w-full border border-gray-300 rounded-lg p-3
+                                      focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+
+                    <div>
+                        <label for="telefone" class="block font-semibold mb-2">
+                            Telefone
+                        </label>
+                        <input type="tel" id="telefone" name="telefone" required
+                               class="w-full border border-gray-300 rounded-lg p-3
+                                      focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+
+                    <div>
+                        <label for="endereco" class="block font-semibold mb-2">
+                            Endereço
+                        </label>
+                        <input type="text" id="endereco" name="endereco" required
+                               class="w-full border border-gray-300 rounded-lg p-3
+                                      focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+
+                    <div>
+                        <label for="unidade" class="block font-semibold mb-2">
+                            Unidade
+                        </label>
+                        <select id="unidade" name="unidade" required
+                                class="w-full border border-gray-300 rounded-lg p-3 bg-white
+                                       focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <option value="">Selecione uma unidade</option>
+                            <option>Centro</option>
+                            <option>Imbuí</option>
+                            <option>Pituba</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="especialidade" class="block font-semibold mb-2">
+                            Especialidade
+                        </label>
+                        <select id="especialidade" name="especialidade" required
+                                class="w-full border border-gray-300 rounded-lg p-3 bg-white
+                                       focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <option value="">Selecione uma especialidade</option>
+                            <option>Odontopediatria</option>
+                            <option>Ortodontia</option>
+                            <option>Endodontia</option>
+                            <option>Implantodontia</option>
+                            <option>Periodontia</option>
+                            <option>Clínica Geral</option>
+                        </select>
+                    </div>
+
+                    <div class="md:col-span-2">
+                        <label for="data" class="block font-semibold mb-2">
+                            Data desejada
+                        </label>
+                        <input type="date" id="data" name="data" required
+                               class="w-full border border-gray-300 rounded-lg p-3
+                                      focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                </div>
+
+                <button type="submit"
+                        class="w-full mt-6 bg-blue-700 text-white font-bold
+                               py-3 rounded-lg hover:bg-blue-800 transition">
+                    Solicitar agendamento
+                </button>
+
+            </form>
+        </section>
+
+        <div class="text-center pb-10">
+            <button id="abrirModal"
+                    class="bg-blue-700 text-white px-6 py-3 rounded-lg
+                           hover:bg-blue-800 transition">
+                Ver comunicado sobre os planos
+            </button>
+        </div>
+
+    </main>
+
+    <div id="modalAviso"
+        class="hidden fixed inset-0 z-50 bg-black/60
+            items-center justify-center p-4">
+
+        <div class="bg-white rounded-xl shadow-2xl w-full max-w-lg p-6">
+
+            <div class="flex justify-between items-center mb-5">
+                <h2 class="text-xl font-bold text-blue-800">
+                    Comunicado importante
+                </h2>
+
+                <button id="fecharX"
+                        class="text-gray-500 text-2xl hover:text-gray-800"
+                        aria-label="Fechar modal">
+                    &times;
+                </button>
+            </div>
+
+            <p class="text-gray-700 mb-4">
+                Informamos que, a partir de 31/10/2027, a clínica não aceitará os seguintes planos:
+            </p>
+
+            <ul class="list-disc pl-6 mb-6 text-gray-700 space-y-2">
+                <li>Hapivida</li>
+                <li>Planserv</li>
+                <li>Unimed</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer class="bg-gray-900 text-white py-10">
+
+        <div class="max-w-7xl mx-auto px-4">
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <div>
+                    <h3 class="text-xl font-bold mb-3">Sorriso Clínica</h3>
+                    <p class="text-gray-300">
+                        Cuidando da saúde bucal com qualidade, atenção e profissionalismo.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold mb-3">Navegação</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#inicio" class="text-gray-300 hover:text-white">Início</a></li>
+                        <li><a href="#equipe" class="text-gray-300 hover:text-white">Nossa equipe</a></li>
+                        <li><a href="#procedimentos" class="text-gray-300 hover:text-white">Procedimentos</a></li>
+                        <li><a href="#agendamento" class="text-gray-300 hover:text-white">Agendamento</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold mb-3">Contato</h3>
+                    <p class="text-gray-300">Salvador - BA</p>
+                    <p class="text-gray-300">(71) 3333-3333</p>
+                    <p class="text-gray-300">contato@sorrisoclinica.com.br</p>
+                </div>
+
+            </div>
+
+            <div class="border-t border-gray-700 mt-8 pt-5 text-center text-gray-400">
+                © 2026 Sorriso Clínica. Todos os direitos reservados.
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
